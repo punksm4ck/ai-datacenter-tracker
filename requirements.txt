@@ -1,0 +1,9 @@
+# AI Data Center Tracker — Python Dependencies
+# Install system packages first:
+#   sudo apt install python3-pyqt6 python3-pyqt6.qtwebengine
+#
+# Then:
+#   pip install -r requirements.txt --break-system-packages
+
+anthropic>=0.40.0
+requests>=2.32.0
