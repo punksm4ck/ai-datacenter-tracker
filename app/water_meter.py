@@ -49,7 +49,7 @@ class WaterStatusWidget(QWidget):
 
         def _lbl(text, color):
             l = QLabel(text)
-            l.setFont(QFont("Monospace", 10))
+            l.setFont(QFont("Menlo", 10))
             l.setStyleSheet(f"color:{color};")
             return l
 
@@ -98,7 +98,7 @@ class WaterMeterPanel(QFrame):
 
         # ── Header ────────────────────────────────────────────────────────
         hdr = QLabel("💧  AI SESSION WATER USAGE")
-        hdr.setFont(QFont("Monospace", 9))
+        hdr.setFont(QFont("Menlo", 9))
         hdr.setStyleSheet(
             "color:rgba(0,200,255,0.70); letter-spacing:1.5px;"
             " border-bottom:1px solid rgba(0,200,255,0.15);"
@@ -110,16 +110,16 @@ class WaterMeterPanel(QFrame):
         bottle_row = QHBoxLayout()
         bottle_row.setSpacing(8)
         bottle_icon = QLabel("🍶")
-        bottle_icon.setFont(QFont("Monospace", 22))
+        bottle_icon.setFont(QFont("Menlo", 22))
         bottle_row.addWidget(bottle_icon)
 
         bottle_col = QVBoxLayout()
         bottle_col.setSpacing(0)
         self._bottle_big = QLabel("0.0000000000")
-        self._bottle_big.setFont(QFont("Monospace", 18))
+        self._bottle_big.setFont(QFont("Menlo", 18))
         self._bottle_big.setStyleSheet("color:#00ffff; font-weight:bold;")
         self._bottle_unit = QLabel("16 oz bottles")
-        self._bottle_unit.setFont(QFont("Monospace", 9))
+        self._bottle_unit.setFont(QFont("Menlo", 9))
         self._bottle_unit.setStyleSheet("color:rgba(0,200,255,0.45);")
         bottle_col.addWidget(self._bottle_big)
         bottle_col.addWidget(self._bottle_unit)
@@ -134,12 +134,12 @@ class WaterMeterPanel(QFrame):
 
         def _metric(icon, label, color):
             ico  = QLabel(icon)
-            ico.setFont(QFont("Monospace", 13))
+            ico.setFont(QFont("Menlo", 13))
             lbl  = QLabel(label)
-            lbl.setFont(QFont("Monospace", 8))
+            lbl.setFont(QFont("Menlo", 8))
             lbl.setStyleSheet("color:rgba(160,160,180,0.70);")
             val  = QLabel("—")
-            val.setFont(QFont("Monospace", 12))
+            val.setFont(QFont("Menlo", 12))
             val.setStyleSheet(f"color:{color}; font-weight:bold;")
             val.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
             return ico, lbl, val
@@ -165,7 +165,7 @@ class WaterMeterPanel(QFrame):
 
         # ── Footer note ───────────────────────────────────────────────────
         note = QLabel("16 oz / 100 words  ·  2g CO₂ / 100 words")
-        note.setFont(QFont("Monospace", 7))
+        note.setFont(QFont("Menlo", 7))
         note.setStyleSheet(
             "color:rgba(80,120,140,0.60);"
             " border-top:1px solid rgba(100,200,255,0.08);"

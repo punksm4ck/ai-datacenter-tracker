@@ -93,7 +93,7 @@ class _Bubble(QFrame):
         lay.setContentsMargins(10, 7, 10, 7)
         lay.setSpacing(3)
         who = QLabel("You" if role == "user" else "Llama 3.3")
-        who.setFont(QFont("Monospace", 8))
+        who.setFont(QFont("Menlo", 8))
         who.setStyleSheet(
             "color:#64c8ff;font-weight:bold;" if role == "user"
             else "color:#a064ff;font-weight:bold;"
@@ -102,7 +102,7 @@ class _Bubble(QFrame):
         self.body = QLabel(text)
         self.body.setWordWrap(True)
         self.body.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
-        self.body.setFont(QFont("Monospace", 9))
+        self.body.setFont(QFont("Menlo", 9))
         self.body.setStyleSheet("color:#d0e8ff; line-height:1.5;")
         lay.addWidget(self.body)
         if role == "user":
@@ -150,14 +150,14 @@ class AIChatSidebar(QWidget):
             "border-bottom:1px solid rgba(160,100,255,0.30);}")
         hl = QHBoxLayout(hdr)
         hl.setContentsMargins(12, 0, 12, 0)
-        ico = QLabel("⬡"); ico.setFont(QFont("Monospace",18)); ico.setStyleSheet("color:#a064ff;")
+        ico = QLabel("⬡"); ico.setFont(QFont("Menlo",18)); ico.setStyleSheet("color:#a064ff;")
         hl.addWidget(ico)
         col = QVBoxLayout(); col.setSpacing(0)
-        t1 = QLabel("AI Assistant"); t1.setFont(QFont("Monospace",11)); t1.setStyleSheet("color:#e0d0ff;font-weight:bold;")
-        t2 = QLabel(f"groq / {MODEL}"); t2.setFont(QFont("Monospace",8)); t2.setStyleSheet("color:#503860;")
+        t1 = QLabel("AI Assistant"); t1.setFont(QFont("Menlo",11)); t1.setStyleSheet("color:#e0d0ff;font-weight:bold;")
+        t2 = QLabel(f"groq / {MODEL}"); t2.setFont(QFont("Menlo",8)); t2.setStyleSheet("color:#503860;")
         col.addWidget(t1); col.addWidget(t2)
         hl.addLayout(col); hl.addStretch()
-        self._status_dot = QLabel("●"); self._status_dot.setFont(QFont("Monospace",10)); self._status_dot.setStyleSheet("color:#32ff96;")
+        self._status_dot = QLabel("●"); self._status_dot.setFont(QFont("Menlo",10)); self._status_dot.setStyleSheet("color:#32ff96;")
         hl.addWidget(self._status_dot)
         key_btn = QPushButton("🔑"); key_btn.setFixedSize(28,28)
         key_btn.setToolTip("Change Groq API key")
@@ -178,7 +178,7 @@ class AIChatSidebar(QWidget):
             ("🔥 Mega",   "Which are the largest planned or under-construction AI data center projects in the USA right now?"),
             ("🗺 States", "Which US states have the most AI data center activity and why?"),
         ]:
-            b = QPushButton(label); b.setFont(QFont("Monospace",8))
+            b = QPushButton(label); b.setFont(QFont("Menlo",8))
             b.setStyleSheet(
                 "QPushButton{background:rgba(160,100,255,0.10);"
                 "border:1px solid rgba(160,100,255,0.25);"
@@ -210,7 +210,7 @@ class AIChatSidebar(QWidget):
         il = QVBoxLayout(inf); il.setContentsMargins(10,8,10,10); il.setSpacing(6)
         self._input = QTextEdit()
         self._input.setPlaceholderText("Ask about AI data centers, trends, operators…  (Enter to send)")
-        self._input.setFixedHeight(68); self._input.setFont(QFont("Monospace",9))
+        self._input.setFixedHeight(68); self._input.setFont(QFont("Menlo",9))
         self._input.setStyleSheet(
             "QTextEdit{background:rgba(20,30,60,0.60);"
             "border:1px solid rgba(100,200,255,0.20);"
@@ -219,13 +219,13 @@ class AIChatSidebar(QWidget):
         self._input.installEventFilter(self)
         il.addWidget(self._input)
         br = QHBoxLayout(); br.setSpacing(8)
-        clr = QPushButton("Clear"); clr.setFont(QFont("Monospace",8)); clr.setFixedHeight(28)
+        clr = QPushButton("Clear"); clr.setFont(QFont("Menlo",8)); clr.setFixedHeight(28)
         clr.setStyleSheet(
             "QPushButton{background:rgba(60,20,20,0.50);border:1px solid rgba(255,80,80,0.20);"
             "border-radius:5px;color:#ff6060;padding:0 10px;}"
             "QPushButton:hover{background:rgba(80,20,20,0.70);}")
         clr.clicked.connect(self._clear)
-        self._send_btn = QPushButton("Send  ↵"); self._send_btn.setFont(QFont("Monospace",9)); self._send_btn.setFixedHeight(28)
+        self._send_btn = QPushButton("Send  ↵"); self._send_btn.setFont(QFont("Menlo",9)); self._send_btn.setFixedHeight(28)
         self._send_btn.setStyleSheet(
             "QPushButton{background:qlineargradient(x1:0,y1:0,x2:1,y2:0,"
             "stop:0 rgba(100,50,200,0.80),stop:1 rgba(160,100,255,0.80));"

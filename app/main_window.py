@@ -41,14 +41,14 @@ QToolBar {
 QStatusBar {
     background: rgba(8,12,20,0.98);
     border-top: 1px solid rgba(100,200,255,0.12);
-    color: #4a7090; font-family: monospace; font-size: 11px;
+    color: #4a7090; font-family: Menlo; font-size: 11px;
 }
-QLabel       { color: #c0d8f0; font-family: monospace; }
+QLabel       { color: #c0d8f0; font-family: Menlo; }
 QPushButton  {
     background: rgba(20,40,80,0.60);
     border: 1px solid rgba(100,200,255,0.25);
     border-radius: 5px; color: #80c0e0;
-    font-family: monospace; font-size: 11px; padding: 5px 14px;
+    font-family: Menlo; font-size: 11px; padding: 5px 14px;
 }
 QPushButton:hover   { background: rgba(30,60,110,0.80); border-color: rgba(100,200,255,0.50); }
 QPushButton:pressed { background: rgba(50,100,160,0.80); }
@@ -56,7 +56,7 @@ QComboBox {
     background: rgba(15,25,50,0.70);
     border: 1px solid rgba(100,200,255,0.20);
     border-radius: 5px; color: #90c8e8;
-    font-family: monospace; font-size: 11px;
+    font-family: Menlo; font-size: 11px;
     padding: 4px 10px; min-width: 140px;
 }
 QComboBox::drop-down { border: none; width: 20px; }
@@ -70,10 +70,10 @@ QLineEdit {
     background: rgba(15,25,50,0.70);
     border: 1px solid rgba(100,200,255,0.20);
     border-radius: 5px; color: #90c8e8;
-    font-family: monospace; font-size: 11px; padding: 4px 10px;
+    font-family: Menlo; font-size: 11px; padding: 4px 10px;
 }
 QLineEdit:focus { border-color: rgba(100,200,255,0.50); }
-QCheckBox { color: #80c0e0; font-family: monospace; font-size: 10px; spacing: 6px; }
+QCheckBox { color: #80c0e0; font-family: Menlo; font-size: 10px; spacing: 6px; }
 QCheckBox::indicator {
     width: 14px; height: 14px;
     border: 1px solid rgba(100,200,255,0.30);
@@ -86,16 +86,16 @@ QScrollBar::handle:vertical { background: rgba(100,200,255,0.25); border-radius:
 QToolTip {
     background: #0a1428; color: #90c8e8;
     border: 1px solid rgba(100,200,255,0.30);
-    font-family: monospace; font-size: 10px; padding: 4px 8px;
+    font-family: Menlo; font-size: 10px; padding: 4px 8px;
 }
 """
 
-BTN_GREEN = """QPushButton{background:rgba(20,70,30,0.55);border:1px solid rgba(50,200,80,0.35);border-radius:5px;color:#50e878;font-family:monospace;font-size:11px;padding:5px 14px;}QPushButton:hover{background:rgba(30,100,40,0.80);border-color:rgba(80,220,100,0.60);}"""
-BTN_RED   = """QPushButton{background:rgba(80,20,20,0.55);border:1px solid rgba(255,80,80,0.35);border-radius:5px;color:#ff7070;font-family:monospace;font-size:11px;padding:5px 14px;}QPushButton:hover{background:rgba(110,30,30,0.80);border-color:rgba(255,100,100,0.60);}"""
-BTN_CHAT_ON  = """QPushButton{background:rgba(100,50,200,0.50);border:1px solid rgba(160,100,255,0.50);border-radius:5px;color:#c090ff;font-family:monospace;font-size:11px;padding:5px 14px;}QPushButton:hover{background:rgba(120,60,220,0.70);}"""
-BTN_CHAT_OFF = """QPushButton{background:rgba(20,40,80,0.60);border:1px solid rgba(100,200,255,0.25);border-radius:5px;color:#80c0e0;font-family:monospace;font-size:11px;padding:5px 14px;}QPushButton:hover{background:rgba(30,60,110,0.80);border-color:rgba(100,200,255,0.50);}"""
-BTN_WATER_ON  = """QPushButton{background:rgba(0,80,120,0.55);border:1px solid rgba(0,200,255,0.50);border-radius:5px;color:#00e0ff;font-family:monospace;font-size:11px;padding:5px 14px;}QPushButton:hover{background:rgba(0,100,140,0.70);}"""
-BTN_WATER_OFF = """QPushButton{background:rgba(20,40,80,0.60);border:1px solid rgba(100,200,255,0.25);border-radius:5px;color:#80c0e0;font-family:monospace;font-size:11px;padding:5px 14px;}QPushButton:hover{background:rgba(30,60,110,0.80);}"""
+BTN_GREEN = """QPushButton{background:rgba(20,70,30,0.55);border:1px solid rgba(50,200,80,0.35);border-radius:5px;color:#50e878;font-family: Menlo;font-size:11px;padding:5px 14px;}QPushButton:hover{background:rgba(30,100,40,0.80);border-color:rgba(80,220,100,0.60);}"""
+BTN_RED   = """QPushButton{background:rgba(80,20,20,0.55);border:1px solid rgba(255,80,80,0.35);border-radius:5px;color:#ff7070;font-family: Menlo;font-size:11px;padding:5px 14px;}QPushButton:hover{background:rgba(110,30,30,0.80);border-color:rgba(255,100,100,0.60);}"""
+BTN_CHAT_ON  = """QPushButton{background:rgba(100,50,200,0.50);border:1px solid rgba(160,100,255,0.50);border-radius:5px;color:#c090ff;font-family: Menlo;font-size:11px;padding:5px 14px;}QPushButton:hover{background:rgba(120,60,220,0.70);}"""
+BTN_CHAT_OFF = """QPushButton{background:rgba(20,40,80,0.60);border:1px solid rgba(100,200,255,0.25);border-radius:5px;color:#80c0e0;font-family: Menlo;font-size:11px;padding:5px 14px;}QPushButton:hover{background:rgba(30,60,110,0.80);border-color:rgba(100,200,255,0.50);}"""
+BTN_WATER_ON  = """QPushButton{background:rgba(0,80,120,0.55);border:1px solid rgba(0,200,255,0.50);border-radius:5px;color:#00e0ff;font-family: Menlo;font-size:11px;padding:5px 14px;}QPushButton:hover{background:rgba(0,100,140,0.70);}"""
+BTN_WATER_OFF = """QPushButton{background:rgba(20,40,80,0.60);border:1px solid rgba(100,200,255,0.25);border-radius:5px;color:#80c0e0;font-family: Menlo;font-size:11px;padding:5px 14px;}QPushButton:hover{background:rgba(30,60,110,0.80);}"""
 
 
 # ── Desktop launcher helpers ──────────────────────────────────────────────────
@@ -148,7 +148,7 @@ class FilterPanel(QFrame):
         vbox.setContentsMargins(0, 0, 0, 0)
         vbox.setSpacing(0)
         hdr = QLabel(heading)
-        hdr.setFont(QFont("Monospace", 8))
+        hdr.setFont(QFont("Menlo", 8))
         hdr.setStyleSheet(
             "color:#3a6080;background:rgba(30,60,100,0.30);"
             "padding:4px 8px;letter-spacing:2px;border-radius:5px 5px 0 0;"
@@ -162,7 +162,7 @@ class FilterPanel(QFrame):
         root.setSpacing(14)
 
         ttl = QLabel("⬡  FILTERS")
-        ttl.setFont(QFont("Monospace", 10))
+        ttl.setFont(QFont("Menlo", 10))
         ttl.setStyleSheet("color:#64c8ff;letter-spacing:3px;font-weight:bold;")
         root.addWidget(ttl)
 
@@ -224,8 +224,8 @@ class FilterPanel(QFrame):
             ("States",             str(s["states"])),
         ]:
             row = QHBoxLayout(); row.setSpacing(4)
-            l = QLabel(lbl_t); l.setFont(QFont("Monospace",8)); l.setStyleSheet("color:#4a7090;")
-            v = QLabel(val_t); v.setFont(QFont("Monospace",9))
+            l = QLabel(lbl_t); l.setFont(QFont("Menlo",8)); l.setStyleSheet("color:#4a7090;")
+            v = QLabel(val_t); v.setFont(QFont("Menlo",9))
             v.setStyleSheet("color:#64c8ff;font-weight:bold;")
             v.setAlignment(Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter)
             row.addWidget(l,1); row.addWidget(v,0); gl4.addLayout(row)
@@ -257,7 +257,7 @@ class MainWindow(QMainWindow):
         self.tray_icon  = None
         self._map_ready = False
 
-        self.setWindowTitle("⬡  AI Data Center Tracker — USA")
+        self.setWindowTitle("Punksm4ck AI Data Center Command — 2026 Edition")
         self.setWindowIcon(self._app_icon)
         self.resize(1600, 900)
         self.setMinimumSize(1100, 650)
@@ -300,7 +300,7 @@ class MainWindow(QMainWindow):
             tb.addWidget(b); return b
 
         lbl = QLabel("  ⬡  AI DATA CENTER TRACKER — USA  ")
-        lbl.setFont(QFont("Monospace", 11))
+        lbl.setFont(QFont("Menlo", 11))
         lbl.setStyleSheet("color:#64c8ff;font-weight:bold;letter-spacing:2px;")
         tb.addWidget(lbl); _vsep()
 
@@ -330,7 +330,7 @@ class MainWindow(QMainWindow):
 
         # Timestamp
         self.ts_label = QLabel()
-        self.ts_label.setFont(QFont("Monospace", 9))
+        self.ts_label.setFont(QFont("Menlo", 9))
         self.ts_label.setStyleSheet("color:#2a4060;")
         tb.addWidget(self.ts_label)
         self._tick_timestamp()
@@ -466,7 +466,7 @@ class MainWindow(QMainWindow):
     def _push_markers(self):
         if not self._map_ready: return
         data = get_datacenters_as_json().replace("\\","\\\\").replace("`","\\`")
-        self.webview.page().runJavaScript(f"loadDatacenters({data});")
+        self.webview.page().runJavaScript(f"if (typeof loadDatacenters === 'function') loadDatacenters({data});")
 
     def _reload_data(self):
         self._push_markers(); self._tick_timestamp(); self._status("Dataset refreshed.")

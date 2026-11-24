@@ -81,19 +81,19 @@ class ApiKeyDialog(QDialog):
         self.setWindowFlags(Qt.WindowType.Dialog | Qt.WindowType.WindowTitleHint | Qt.WindowType.WindowCloseButtonHint)
         self.setStyleSheet("""
             QDialog { background: #080c16; }
-            QLabel { color: #c0d8f0; font-family: monospace; }
+            QLabel { color: #c0d8f0; font-family: Menlo; }
             QLineEdit {
                 background: rgba(15,25,50,0.90);
                 border: 1px solid rgba(100,200,255,0.30);
                 border-radius: 6px; color: #90c8e8;
-                font-family: monospace; font-size: 12px; padding: 8px 12px;
+                font-family: Menlo; font-size: 12px; padding: 8px 12px;
             }
             QLineEdit:focus { border-color: rgba(100,200,255,0.70); }
             QPushButton {
                 background: rgba(20,40,80,0.70);
                 border: 1px solid rgba(100,200,255,0.30);
                 border-radius: 5px; color: #80c0e0;
-                font-family: monospace; font-size: 11px; padding: 7px 18px;
+                font-family: Menlo; font-size: 11px; padding: 7px 18px;
             }
             QPushButton:hover { background: rgba(30,60,110,0.90); }
             QPushButton:disabled { opacity: 0.35; }
@@ -106,7 +106,7 @@ class ApiKeyDialog(QDialog):
 
         # Header
         hl = QHBoxLayout()
-        ico = QLabel("⬡"); ico.setFont(QFont("Monospace",26)); ico.setStyleSheet("color:#64c8ff;")
+        ico = QLabel("⬡"); ico.setFont(QFont("Menlo",26)); ico.setStyleSheet("color:#64c8ff;")
         hl.addWidget(ico)
         col = QVBoxLayout(); col.setSpacing(2)
         col.addWidget(_lbl("AI Data Center Tracker", 13, "#fff", bold=True))
@@ -141,7 +141,7 @@ class ApiKeyDialog(QDialog):
         root.addWidget(_lbl("Free key: console.groq.com → API Keys → Create API Key", 9, "#304858"))
 
         self._status = QLabel("")
-        self._status.setFont(QFont("Monospace",10))
+        self._status.setFont(QFont("Menlo",10))
         self._status.setWordWrap(True); self._status.setMinimumHeight(18)
         root.addWidget(self._status)
 
@@ -150,7 +150,7 @@ class ApiKeyDialog(QDialog):
         skip.setStyleSheet(
             "QPushButton{background:rgba(40,20,20,0.50);"
             "border:1px solid rgba(100,60,60,0.40);border-radius:5px;"
-            "color:#806060;font-family:monospace;font-size:11px;padding:7px 18px;}"
+            "color:#806060;font-family: Menlo;font-size:11px;padding:7px 18px;}"
             "QPushButton:hover{color:#a07070;}")
         skip.clicked.connect(self.reject)
 
@@ -160,7 +160,7 @@ class ApiKeyDialog(QDialog):
             "QPushButton{background:qlineargradient(x1:0,y1:0,x2:1,y2:0,"
             "stop:0 rgba(0,80,160,0.80),stop:1 rgba(0,140,200,0.80));"
             "border:1px solid rgba(0,180,255,0.50);border-radius:5px;color:#fff;"
-            "font-family:monospace;font-size:11px;font-weight:bold;padding:7px 18px;}"
+            "font-family: Menlo;font-size:11px;font-weight:bold;padding:7px 18px;}"
             "QPushButton:hover{background:rgba(0,120,200,0.90);}"
             "QPushButton:disabled{opacity:0.30;}")
         self._save_btn.clicked.connect(self._on_save)
@@ -192,7 +192,7 @@ class ApiKeyDialog(QDialog):
 
 
 def _lbl(text, size=10, color="#c0d8f0", bold=False):
-    l = QLabel(text); l.setFont(QFont("Monospace", size)); l.setWordWrap(True)
+    l = QLabel(text); l.setFont(QFont("Menlo", size)); l.setWordWrap(True)
     l.setStyleSheet(f"color:{color};{'font-weight:bold;' if bold else ''}")
     return l
 
