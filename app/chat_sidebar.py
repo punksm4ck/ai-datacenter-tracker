@@ -63,8 +63,15 @@ class _StreamWorker(QThread):
             stats  = get_stats()
             system = SYSTEM_PROMPT + f"\n\nLive dataset: {json.dumps(stats)}"
 
+            active_model = MODEL
+            try:
+                available = [m.id for m in client.models.list().data if getattr(m, "id", None)]
+                if MODEL not in available and available:
+                    active_model = next((m for m in available if "llama" in m.lower() or "gpt" in m.lower() or "qwen" in m.lower()), available[0])
+            except Exception:
+                pass
             with client.chat.completions.create(
-                model=MODEL,
+                model=active_model,
                 messages=[{"role":"system","content":system}] + self._messages,
                 max_tokens=1024,
                 stream=True,

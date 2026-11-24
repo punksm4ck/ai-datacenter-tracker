@@ -60,10 +60,10 @@ class _ValidateWorker(QThread):
     def run(self):
         try:
             from groq import Groq
-            Groq(api_key=self._key).chat.completions.create(
-                model="llama-3.3-70b-versatile",
-                messages=[{"role":"user","content":"hi"}],
-                max_tokens=1)
+            _client = Groq(api_key=self._key)
+            _models = _client.models.list()
+            if not getattr(_models, "data", None):
+                raise RuntimeError("No active Groq models returned for key")
             self.result.emit(True, "Groq API key validated successfully.")
         except Exception as e:
             msg = str(e).lower()
